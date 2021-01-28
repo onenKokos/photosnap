@@ -1,0 +1,16 @@
+{
+  // don't show in file tree
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/*.log": true,
+    "**/node_modules": true,
+    ".eslintcache": true
+  },
+  "window.title": "${dirty}${activeEditorShort}",
+  // just in case .editorconfig doesn't work
+  "editor.wordWrapColumn": 100,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true
+}

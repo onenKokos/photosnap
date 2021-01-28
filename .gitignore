@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+
+# environment
+.env
+.env.local
+.env.development
+.env.test.local
+.env.production.test
+
+# testing
+/coverage
+
+# production
+.next
+
+# miscellaneous
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vercel
