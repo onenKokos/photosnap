@@ -35,10 +35,9 @@ class CustomDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="/public/static/favicon.ico" />
-          <link rel="manifest" href="/public/static/manifest.json" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
-
         <body>
           <Main />
           <NextScript />
