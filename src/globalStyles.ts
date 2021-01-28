@@ -2,10 +2,23 @@ import 'sanitize.css';
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+
   @font-face {
-    font-family: 'Open-Sans';
-    src: url('/public/static/font/OpenSans) format('opentype);
+    font-family: 'DMSans';
+    src: url('public/font/DMSans-Regular.ttf') format('true-type');
     font-weight: 100;
+  }
+
+  @font-face {
+    font-family: 'DMSans';
+    src: url('public/font/DMSans-Medium.ttf') format('true-type');
+    font-weight: 200;
+  }
+
+  @font-face {
+    font-family: 'DMSans';
+    src: url('public/font/DMSans-Bold.ttf') format('true-type');
+    font-weight: 400;
   }
 
   * {
@@ -22,12 +35,11 @@ const GlobalStyles = createGlobalStyle`
     font-size: 100%;
     width: 100%;
     height: 100vh;
-    font-family: Open-Sans
   }
 
   body {
     font-size: 1.6rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'DMSans', sans-serif;
     font-weight: 100;
     height: 100%;
   }
