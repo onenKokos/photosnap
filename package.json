@@ -1,0 +1,10 @@
+{
+  "name": "photosnap",
+  "version": "1.0.0",
+  "description": "Photosnap website based on Frontend Mentor",
+  "main": "index.js",
+  "repository": "https://github.com/onenKokos/photosnap.git",
+  "author": "Lukas Riha <lukas.riha94@seznam.cz>",
+  "license": "MIT",
+  "private": false
+}
