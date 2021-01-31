@@ -4,7 +4,7 @@ import Head from 'next/head';
 import GlobalStyles from '../src/globalStyles';
 import AppContext from '@Store/index';
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <AppContext>
       <Head>
