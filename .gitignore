@@ -9,7 +9,7 @@
 .env.production.test
 
 # testing
-/coverage
+/cypress/videos
 
 # production
 .next

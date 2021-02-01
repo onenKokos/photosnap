@@ -15,7 +15,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
+      "pre-commit": "npm run build && pretty-quick --staged && npm run lint && npm run test && npm run cy"
     }
   },
   "scripts": {
@@ -26,7 +26,9 @@
     "lint:ts": "eslint --ext .ts,.tsx .",
     "lint:css": "stylelint \"./src/**/*.{ts,tsx}\"",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "cy:open": "cypress open",
+    "cy": "cypress run"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -51,6 +53,7 @@
     "babel-jest": "^26.6.3",
     "babel-plugin-inline-react-svg": "^1.1.2",
     "babel-plugin-styled-components": "^1.12.0",
+    "cypress": "^6.3.0",
     "eslint": "^7.18.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
