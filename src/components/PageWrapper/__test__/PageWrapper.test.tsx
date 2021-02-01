@@ -1,9 +1,17 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import PageWrapper from '../';
+import PageWrapper, { PageWrapperProps } from '../index';
+
+const renderPageWrapper = (props: Partial<PageWrapperProps> = {}) => {
+  const defaultProps: PageWrapperProps = {
+    children: <></>,
+  };
+  return render(<PageWrapper {...defaultProps} {...props} />);
+};
 
 describe('<LoginForm />', () => {
-  test('should display a blank login form, with remember me checked by default', async () => {
-    // ???
+  it('should render correctly', () => {
+    const renderer = renderPageWrapper;
+    expect(renderer).toMatchSnapshot();
   });
 });

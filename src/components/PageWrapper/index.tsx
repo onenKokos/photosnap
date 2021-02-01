@@ -1,12 +1,12 @@
-import { FC, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { PageWrapper as StyledWrapper } from './styled';
 
-interface PageWrapperProps {
-  children?: ReactNode;
+export interface PageWrapperProps {
+  children: ReactNode;
 }
 
-const PageWrapper: FC<PageWrapperProps> = ({ children }: PageWrapperProps) => (
-  <StyledWrapper>{children}</StyledWrapper>
-);
+function PageWrapper({ children }: PageWrapperProps) {
+  return <StyledWrapper>{children}</StyledWrapper>;
+}
 
 export default PageWrapper;
