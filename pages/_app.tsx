@@ -13,9 +13,10 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
         <meta name="theme-color" content="#000000" />
       </Head>
       <GlobalStyles />
-      <PageWrapper>
-        <Component {...pageProps} />
-      </PageWrapper>
+      <Component {...pageProps} />
+      {/*       <PageWrapper>
+
+      </PageWrapper> */}
     </AppContext>
   );
 };

@@ -37,7 +37,7 @@ app
         throw err;
       }
 
-      console.log(`[server]: >Ready on port: ${PORT}`); // eslint-disable-line no-console
+      console.log(`[server]: >> Ready on port: ${PORT}`); // eslint-disable-line no-console
     });
   })
   .catch((ex) => {

@@ -24,7 +24,6 @@
     'declaration-no-important': true,
     'selector-max-id': 0,
     'selector-no-qualifying-type': true,
-    'selector-max-type': 0,
     'selector-max-universal': 0,
     'font-weight-notation': 'numeric',
     'function-url-no-scheme-relative': true,

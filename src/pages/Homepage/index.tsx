@@ -1,6 +1,10 @@
-import { FC } from 'react';
-import LoginForm from '@Components/LoginForm';
+import React from 'react';
+import Header from '@Components/Header';
 
-const Homepage: FC = () => <div className="Homepage">This is a login form :)</div>;
+const Homepage = () => (
+  <div className="Homepage">
+    <Header />
+  </div>
+);
 
 export default Homepage;
