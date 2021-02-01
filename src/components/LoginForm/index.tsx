@@ -6,45 +6,45 @@ export interface LoginFormProps {
   onUsernameChange: (username: string) => void;
   onPasswordChange: (password: string) => void;
   onRememberChange: (remember: boolean) => void;
-  onSubmit: (username: string, password: string) => void;
+  onSubmit: (username: string, password: string, remember: boolean) => void;
 }
 
-const LoginForm = ({
+function LoginForm({
   shouldRemember,
   onUsernameChange,
+  onPasswordChange,
   onRememberChange,
   onSubmit,
-  onPasswordChange,
-}: LoginFormProps) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [remember, setRemember] = useState(shouldRemember);
+}: LoginFormProps) {
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [remember, setRemember] = React.useState(shouldRemember);
 
-  const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setUsername(value);
     onUsernameChange(value);
   };
 
-  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setPassword(value);
     onPasswordChange(value);
   };
 
-  const handleRememberChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleRememberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = e.target;
     setRemember(checked);
     onRememberChange(checked);
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(username, password);
+    onSubmit(username, password, remember);
   };
 
   return (
-    <form data-testid="login-form">
+    <form data-testid="login-form" onSubmit={handleSubmit}>
       <label htmlFor="username">Username:</label>
       <input
         data-testid="username"
@@ -79,6 +79,6 @@ const LoginForm = ({
       </button>
     </form>
   );
-};
+}
 
 export default LoginForm;

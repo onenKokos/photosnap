@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component]: LoginForm should render correctly 1`] = `
+<div>
+  <form
+    data-testid="login-form"
+  >
+    <label
+      for="username"
+    >
+      Username:
+    </label>
+    <input
+      data-testid="username"
+      name="username"
+      type="text"
+      value=""
+    />
+    <label
+      for="password"
+    >
+      Password:
+    </label>
+    <input
+      data-testid="password"
+      name="password"
+      type="password"
+      value=""
+    />
+    <label>
+      <input
+        checked=""
+        data-testid="remember"
+        name="remember"
+        type="checkbox"
+      />
+      Remember me?
+    </label>
+    <button
+      data-testid="submit"
+      type="submit"
+    >
+      Sign in
+    </button>
+  </form>
+</div>
+`;

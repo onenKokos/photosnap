@@ -21,7 +21,12 @@ const renderLoginForm = (props: Partial<LoginFormProps> = {}) => {
   return render(<LoginForm {...defaultProps} {...props} />);
 };
 
-describe('<LoginForm />', () => {
+describe('[Component]: LoginForm', () => {
+  it('should render correctly', () => {
+    const renderer = renderLoginForm();
+    expect(renderer.container).toMatchSnapshot();
+  });
+
   test('should display a blank login form, with remember me checked by default', async () => {
     const { findByTestId } = renderLoginForm();
 
@@ -32,5 +37,62 @@ describe('<LoginForm />', () => {
       password: '',
       remember: true,
     });
+  });
+
+  test('should allow entering a username', async () => {
+    const onUsernameChange = jest.fn();
+    const { findByTestId } = renderLoginForm({ onUsernameChange });
+    const username = await findByTestId('username');
+
+    fireEvent.change(username, { target: { value: 'test' } });
+
+    expect(onUsernameChange).toHaveBeenCalledWith('test');
+  });
+
+  test('should allow entering a password', async () => {
+    const onPasswordChange = jest.fn();
+    const { findByTestId } = renderLoginForm({ onPasswordChange });
+    const password = await findByTestId('password');
+
+    fireEvent.change(password, { target: { value: 'password' } });
+
+    expect(onPasswordChange).toHaveBeenCalledWith('password');
+  });
+
+  test('should allow toggling remember me', async () => {
+    const onRememberChange = jest.fn();
+    const { findByTestId } = renderLoginForm({
+      onRememberChange,
+      shouldRemember: false,
+    });
+
+    const remember = await findByTestId('remember');
+
+    fireEvent.click(remember);
+
+    expect(onRememberChange).toHaveBeenCalledWith(true);
+
+    fireEvent.click(remember);
+
+    expect(onRememberChange).toHaveBeenCalledWith(false);
+  });
+
+  test('should submit the form with username, password, and remember', async () => {
+    const onSubmit = jest.fn();
+    const { findByTestId } = renderLoginForm({
+      onSubmit,
+      shouldRemember: false,
+    });
+    const username = await findByTestId('username');
+    const password = await findByTestId('password');
+    const remember = await findByTestId('remember');
+    const submit = await findByTestId('submit');
+
+    fireEvent.change(username, { target: { value: 'test' } });
+    fireEvent.change(password, { target: { value: 'password' } });
+    fireEvent.click(remember);
+    fireEvent.click(submit);
+
+    expect(onSubmit).toHaveBeenCalledWith('test', 'password', true);
   });
 });
