@@ -1,6 +1,7 @@
 const theme = {
   breakpoints: {
-    medium: '75em',
+    medium: '48em',
+    large: '90em',
   },
   colors: {
     primaryDark: 'hsl(0,0%,0%)',

@@ -1,8 +1,11 @@
+const { resolve } = require('path');
+
 module.exports = {
-  roots: ['<rootDir>/src'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+    '.+\\.(svg|css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
+  preset: 'ts-jest',
   globals: {
     // we must specify a custom tsconfig for tests because we need the typescript transform
     // to transform jsx into js rather than leaving it jsx such as the next build requires.  you
@@ -20,4 +23,9 @@ module.exports = {
   testRegex: '(/__test__/.*|(\\.|/)(test|spec))\\.tsx?$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testPathIgnorePatterns: ['./.next/', './node_modules/'],
+  moduleNameMapper: {
+    '^@Components/(.*)$': resolve(__dirname, './src/components/$1'),
+    '^@Common/(.*)$': resolve(__dirname, './src/common/$1'),
+    '^@/(.*)$': resolve(__dirname, './src/$1'),
+  },
 };

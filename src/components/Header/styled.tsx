@@ -3,10 +3,27 @@ import theme from '@Common/theme';
 
 export const StyledHeader = styled.header`
   width: 100%;
-  padding: 1.5rem;
   border-bottom: 1px solid hsl(0, 0%, 59%);
+`;
+
+export const HeaderInner = styled.div`
+  padding: 1.5rem;
+
   display: grid;
   grid-template-columns: 10.625rem auto 1.5rem;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    padding: 1.5rem 7rem;
+    max-width: 71.25em;
+    margin: 0 auto;
+  }
 
   svg {
     grid-column-start: 1;
@@ -26,6 +43,10 @@ export const Hamburger = styled.button<{ isExpanded: boolean }>`
   grid-column-start: 3;
   grid-column-end: 4;
 
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: none;
+  }
+
   div {
     width: 1.5rem;
     height: 0.0625rem;
@@ -41,6 +62,19 @@ export const Hamburger = styled.button<{ isExpanded: boolean }>`
   }
 `;
 
+export const Links = styled.div`
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    padding: 0 15.25rem;
+  }
+`;
+
 export const LinkContainer = styled.div<{ isExpanded: boolean }>`
   grid-column-start: 1;
   grid-column-end: 4;
@@ -50,6 +84,15 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
   max-height: ${(props) => (props.isExpanded ? '16.375rem' : '0rem')};
   transition: max-height 0.3s ease-out;
   overflow: hidden;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-height: unset;
+    align-items: center;
+  }
 
   a {
     text-decoration: none;
@@ -63,10 +106,21 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
     opacity: ${(props) => (props.isExpanded ? '1' : 0)};
     transition: 0.5s ease-out;
     transition-delay: 0.3s;
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      opacity: 1;
+      transform: translateX(0);
+      padding-bottom: 0;
+      letter-spacing: 2px;
+    }
   }
 
   a:first-child {
     padding-top: 2rem;
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      padding-top: inherit;
+    }
   }
 
   a:nth-child(2) {

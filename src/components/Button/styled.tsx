@@ -13,6 +13,7 @@ export const StyledButton = styled.button<{ theme?: 'light' | 'dark' }>`
   text-transform: uppercase;
   border: none;
   font-weight: 600;
+  font-size: 0.75rem;
 
   background-color: ${(props) =>
     props.theme && props.theme === 'light'
@@ -22,4 +23,10 @@ export const StyledButton = styled.button<{ theme?: 'light' | 'dark' }>`
     props.theme && props.theme === 'dark'
       ? `${theme.colors.primaryLight}`
       : `${theme.colors.primaryDark}`};
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    width: 10rem;
+    height: 2.5rem;
+    letter-spacing: 2px;
+  }
 `;
