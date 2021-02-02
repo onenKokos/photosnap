@@ -4,6 +4,8 @@ import theme from '@Common/theme';
 export const StyledHeader = styled.header`
   width: 100%;
   border-bottom: 1px solid hsl(0, 0%, 59%);
+  position: relative;
+  z-index: 10;
 `;
 
 export const HeaderInner = styled.div`
@@ -68,6 +70,15 @@ export const Links = styled.div`
     justify-content: space-between;
     padding: 0 2.5rem;
     flex-grow: 1;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    position: static;
   }
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
