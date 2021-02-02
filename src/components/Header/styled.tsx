@@ -4,15 +4,16 @@ import theme from '@Common/theme';
 export const StyledHeader = styled.header`
   width: 100%;
   border-bottom: 1px solid hsl(0, 0%, 59%);
-  position: relative;
-  z-index: 10;
 `;
 
 export const HeaderInner = styled.div`
   padding: 1.5rem;
-
   display: grid;
   grid-template-columns: 10.625rem auto 1.5rem;
+
+  position: relative;
+  z-index: 11;
+  background-color: ${theme.colors.primaryLight};
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     display: flex;
@@ -95,12 +96,13 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
   max-height: ${(props) => (props.isExpanded ? '16.375rem' : '0rem')};
   transition: max-height 0.3s ease-out;
   overflow: hidden;
-  position: absolute;
   left: 0;
   right: 0;
   background-color: ${theme.colors.primaryLight};
   top: 4.5rem;
+  position: absolute;
   padding: 0 2rem ${(props) => (props.isExpanded ? '2rem' : '0')} 2rem;
+  margin: 0 -1.5rem;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     display: flex;
@@ -148,4 +150,19 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
   a:last-child {
     transition-delay: 0.9s;
   }
+`;
+
+export const Overlay = styled.div<{ isActive: boolean }>`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity linear 0.1s;
+
+  pointer-events: ${(props) => (props.isActive ? 'default' : 'none')};
+  opacity: ${(props) => (props.isActive ? '0.8' : '0')};
+
+  z-index: ${(props) => (props.isActive ? '5' : '-1000')};
+  background-color: ${theme.colors.primaryDark};
 `;

@@ -3,7 +3,7 @@ import Button from '@Components/Button';
 import { STORIES, FEATURES, PRICING } from '@/routes';
 import Link from 'next/link';
 import Logo from '../../../public/images/Logo.svg';
-import { StyledHeader, Hamburger, LinkContainer, Links, HeaderInner } from './styled';
+import { StyledHeader, Hamburger, LinkContainer, Links, HeaderInner, Overlay } from './styled';
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -14,6 +14,7 @@ const Header = () => {
 
   return (
     <StyledHeader data-testid="header">
+      <Overlay isActive={isExpanded} />
       <HeaderInner>
         <Logo />
         <Hamburger isExpanded={isExpanded} onClick={handleClick}>
