@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyledHero, ImageContainer, ContentContainer, Gradient } from './styled';
 import theme from '@Common/theme';
+import Header from '@Components/Typography/Headers';
+import Paragraph from '@Components/Typography/Paragraph';
 
 interface HeroProps {
   mobileImageUrl: string;
@@ -9,6 +11,12 @@ interface HeroProps {
   caption?: string;
   title: string;
   perex: string;
+  info?: Credentials;
+}
+
+interface Credentials {
+  author: string;
+  date: string;
 }
 
 const Hero = ({
@@ -18,6 +26,7 @@ const Hero = ({
   caption,
   title,
   perex,
+  info,
 }: HeroProps) => (
   <>
     <StyledHero>
@@ -28,12 +37,12 @@ const Hero = ({
           <img src={mobileImageUrl} alt="Hero image" />
         </picture>
       </ImageContainer>
+      <Gradient />
       <ContentContainer>
         {caption && <span>{caption}</span>}
-        <h1>{title}</h1>
-        <p>{perex}</p>
+        <Header theme="light" size="large" text={title} />
+        <Paragraph theme="light" text={perex} />
       </ContentContainer>
-      <Gradient />
     </StyledHero>
   </>
 );

@@ -17,6 +17,12 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const ContentContainer = styled.div``;
+export const ContentContainer = styled.div`
+  padding: 4.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const Gradient = styled.div``;

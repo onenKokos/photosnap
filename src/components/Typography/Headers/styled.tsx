@@ -6,6 +6,9 @@ export const StyledH1 = styled.h1<{ theme: 'light' | 'dark' }>`
   line-height: 2.5rem;
   font-weight: 600;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+
   color: ${(props) =>
     props.theme === 'light' ? `${theme.colors.primaryLight}` : `${theme.colors.primaryDark}`};
 

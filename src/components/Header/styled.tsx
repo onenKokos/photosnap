@@ -95,6 +95,12 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
   max-height: ${(props) => (props.isExpanded ? '16.375rem' : '0rem')};
   transition: max-height 0.3s ease-out;
   overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: ${theme.colors.primaryLight};
+  top: 4.5rem;
+  padding: 0 2rem ${(props) => (props.isExpanded ? '2rem' : '0')} 2rem;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     display: flex;
@@ -103,6 +109,7 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
     flex-grow: 1;
     max-height: unset;
     align-items: center;
+    position: static;
   }
 
   a {
