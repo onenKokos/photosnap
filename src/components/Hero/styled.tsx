@@ -8,6 +8,24 @@ export const StyledHero = styled.section`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 18.375rem;
+  border-bottom: 5px solid ${theme.colors.primaryDark};
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 2rem;
+    height: 5px;
+    width: 8rem;
+    background-image: linear-gradient(
+      to right,
+      ${theme.colors.accents.primary},
+      ${theme.colors.accents.secondary},
+      ${theme.colors.accents.tertiary}
+    );
+  }
 
   img {
     width: 100%;
@@ -24,5 +42,3 @@ export const ContentContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
-
-export const Gradient = styled.div``;

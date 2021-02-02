@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyledHero, ImageContainer, ContentContainer, Gradient } from './styled';
+import { StyledHero, ImageContainer, ContentContainer } from './styled';
 import theme from '@Common/theme';
 import Header from '@Components/Typography/Headers';
 import Paragraph from '@Components/Typography/Paragraph';
+import StylishLink from '@Components/StylishLink';
+import texts from '@/common/texts';
 
 interface HeroProps {
   mobileImageUrl: string;
@@ -37,11 +39,11 @@ const Hero = ({
           <img src={mobileImageUrl} alt="Hero image" />
         </picture>
       </ImageContainer>
-      <Gradient />
       <ContentContainer>
         {caption && <span>{caption}</span>}
         <Header theme="light" size="large" text={title} />
         <Paragraph theme="light" text={perex} />
+        <StylishLink url="/" theme="light" text={texts.en.homepage.buttonText} background={false} />
       </ContentContainer>
     </StyledHero>
   </>
