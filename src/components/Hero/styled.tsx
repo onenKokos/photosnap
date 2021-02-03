@@ -16,10 +16,15 @@ export const StyledHero = styled.section<{
   }
 `;
 
-export const ImageContainer = styled.div<{ alignText: 'left' | 'right' }>`
+export const ImageContainer = styled.div<{
+  alignText: 'left' | 'right';
+  heroTheme: 'light' | 'dark';
+}>`
   width: 100%;
   height: 18.375rem;
-  border-bottom: 5px solid ${theme.colors.primaryDark};
+  border-bottom: 5px solid
+    ${(props) =>
+      props.heroTheme === 'dark' ? `${theme.colors.primaryDark}` : `${theme.colors.primaryLight}`};
   position: relative;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {

@@ -41,7 +41,7 @@ const Hero = ({
 }: HeroProps) => (
   <>
     <StyledHero data-testid="hero" alignText={alignText} heroTheme={heroTheme}>
-      <ImageContainer alignText={alignText}>
+      <ImageContainer alignText={alignText} heroTheme={heroTheme}>
         <picture>
           <source srcSet={desktopImageUrl} media={`(min-width:${theme.breakpoints.large})`} />
           <source srcSet={tabletImageUrl} media={`(min-width:${theme.breakpoints.medium})`} />

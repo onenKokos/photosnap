@@ -111,6 +111,7 @@ export const FooterColumn = styled.div`
 
   &:last-child {
     a {
+      margin: 0 auto;
       @media screen and (min-width: ${theme.breakpoints.medium}) {
         margin-left: auto;
         margin-right: 0;

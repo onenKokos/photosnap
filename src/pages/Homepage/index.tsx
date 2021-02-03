@@ -3,7 +3,9 @@ import Header from '@Components/Header';
 import Footer from '@Components/Footer';
 import Hero from '@Components/Hero';
 import texts from '@Common/texts';
+import ImageCardContainer from '@Components/ImageCardContainer';
 import { FEATURES, STORIES } from '@/routes';
+import ImageCard from '@/components/ImageCard';
 
 const Homepage = () => (
   <>
@@ -43,6 +45,70 @@ const Homepage = () => (
       buttonText={texts.en.pages.homepage.hero_three.buttonText}
       heroTheme="dark"
       buttonLink={STORIES}
+    />
+    <ImageCardContainer
+      images={[
+        {
+          date: 'April 12th, 2020',
+          author: 'John Appleseed',
+          title: 'The Mountains',
+          link: {
+            text: 'Read story',
+            url: '/',
+          },
+          image: {
+            alt: 'Image card',
+            urlMobile: '/images/stories/mobile/mountains.jpg',
+            urlTablet: '/images/stories/tablet/mountains.jpg',
+            urlDesktop: '/images/stories/desktop/mountains.jpg',
+          },
+        },
+        {
+          date: 'April 12th, 2020',
+          author: 'John Appleseed',
+          title: 'Sunset Cityscapes',
+          link: {
+            text: 'Read story',
+            url: '/',
+          },
+          image: {
+            alt: 'Image card',
+            urlMobile: '/images/stories/mobile/cityscapes.jpg',
+            urlTablet: '/images/stories/tablet/cityscapes.jpg',
+            urlDesktop: '/images/stories/desktop/cityscapes.jpg',
+          },
+        },
+        {
+          date: 'April 12th, 2020',
+          author: 'Alexei Borodin',
+          title: '18 Day Voyage',
+          link: {
+            text: 'Read story',
+            url: '/',
+          },
+          image: {
+            alt: 'Image card',
+            urlMobile: '/images/stories/mobile/18-days-voyage.jpg',
+            urlTablet: '/images/stories/tablet/18-days-voyage.jpg',
+            urlDesktop: '/images/stories/desktop/18-days-voyage.jpg',
+          },
+        },
+        {
+          date: 'April 12th, 2020',
+          author: 'Samantha Brooke',
+          title: 'Architecturals',
+          link: {
+            text: 'Read story',
+            url: '/',
+          },
+          image: {
+            alt: 'Image card',
+            urlMobile: '/images/stories/mobile/architecturals.jpg',
+            urlTablet: '/images/stories/tablet/architecturals.jpg',
+            urlDesktop: '/images/stories/desktop/architecturals.jpg',
+          },
+        },
+      ]}
     />
     <Footer />
   </>

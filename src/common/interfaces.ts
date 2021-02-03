@@ -1,6 +1,11 @@
 export interface Image {
-  url: string;
+  urlMobile: string;
+  urlTablet: string;
+  urlDesktop: string;
   alt: string;
-  urlMedium?: string;
-  urlLarg?: string;
+}
+
+export interface Link {
+  text: string;
+  url: string;
 }

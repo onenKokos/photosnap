@@ -11,6 +11,7 @@ module.exports = {
       '@Utils': path.resolve(__dirname, './src/utils'),
       '@Public': path.resolve(__dirname, './public/static'),
       '@Store': path.resolve(__dirname, './src/store'),
+      '@Models': path.resolve(__dirname, './src/models'),
     });
     return config;
   },

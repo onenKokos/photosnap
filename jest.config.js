@@ -26,6 +26,7 @@ module.exports = {
   moduleNameMapper: {
     '^@Components/(.*)$': resolve(__dirname, './src/components/$1'),
     '^@Common/(.*)$': resolve(__dirname, './src/common/$1'),
+    '^@Models/(.*)$': resolve(__dirname, './src/models/$1'),
     '^@/(.*)$': resolve(__dirname, './src/$1'),
   },
 };

@@ -18,6 +18,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@Common/*": ["src/common/*"],
+      "@Models/*": ["src/models/*"],
       "@Components/*": ["src/components/*"],
       "@Pages/*": ["src/pages/*"],
       "@Store/*": ["src/store/*"],
