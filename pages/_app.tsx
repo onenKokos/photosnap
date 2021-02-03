@@ -3,6 +3,7 @@ import PageWrapper from '@Components/PageWrapper';
 import Head from 'next/head';
 import GlobalStyles from '../src/globalStyles';
 import AppContext from '@Store/index';
+import ErrorBoundary from '@Components/ErrorBoundary';
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
@@ -13,10 +14,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
         <meta name="theme-color" content="#000000" />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
-      {/*       <PageWrapper>
-
-      </PageWrapper> */}
+      <ErrorBoundary>
+        <Component {...pageProps} />
+      </ErrorBoundary>
     </AppContext>
   );
 };

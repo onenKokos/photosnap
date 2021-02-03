@@ -1,29 +1,33 @@
 import styled from 'styled-components';
 import theme from '@Common/theme';
 
-export const StyledHero = styled.section`
-  background-color: ${theme.colors.primaryDark};
+export const StyledHero = styled.section<{
+  alignText: 'left' | 'right';
+  heroTheme: 'light' | 'dark';
+}>`
+  background-color: ${(props) =>
+    props.heroTheme === 'light' ? `${theme.colors.primaryLight}` : `${theme.colors.primaryDark}`};
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
-    flex-direction: row-reverse;
+    flex-direction: ${(props) => (props.alignText === 'left' ? 'row-reverse' : 'row')};
     height: 40.625rem;
   }
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.div<{ alignText: 'left' | 'right' }>`
   width: 100%;
   height: 18.375rem;
   border-bottom: 5px solid ${theme.colors.primaryDark};
   position: relative;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
-    width: 33%;
+    width: 33.3333%;
   }
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
-    width: 66%;
+    width: 66.6666%;
   }
 
   &::after {
@@ -51,8 +55,9 @@ export const ImageContainer = styled.div`
       );
       height: 46%;
       bottom: 27%;
-      left: unset;
-      right: calc(100vw - 5px);
+
+      left: ${(props) => (props.alignText === 'left' ? 'unset' : 'calc(100vw - 5px)')};
+      right: ${(props) => (props.alignText === 'left' ? 'calc(100vw - 5px)' : 'unset')};
     }
   }
 
@@ -77,12 +82,12 @@ export const ContentContainer = styled.div`
   align-items: center;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
-    width: 66%;
+    width: 66.6666%;
     padding: 11.25rem 3.375rem;
   }
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
-    width: 33%;
+    width: 33.3333%;
   }
 `;
 

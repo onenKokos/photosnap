@@ -19,8 +19,10 @@ export const StyledLink = styled.a<{ theme: 'light' | 'dark'; background: boolea
   }
 
   svg path {
-    fill: ${theme.colors.primaryLight};
-    stroke: ${theme.colors.primaryLight};
+    fill: ${(props) =>
+      props.theme === 'light' ? `${theme.colors.primaryLight}` : `${theme.colors.primaryDark}`};
+    stroke: ${(props) =>
+      props.theme === 'light' ? `${theme.colors.primaryLight}` : `${theme.colors.primaryDark}`};
   }
 
   &:hover {

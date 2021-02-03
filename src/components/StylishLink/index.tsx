@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { StyledLink } from './styled';
 import Arrow from '../../../public/images/Arrow.svg';
 
-interface StylishLinkProps {
+export interface StylishLinkProps {
   text: string;
   url: string;
   theme: 'light' | 'dark';

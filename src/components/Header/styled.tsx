@@ -23,8 +23,8 @@ export const HeaderInner = styled.div`
   }
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
-    padding: 1.5rem 7rem;
-    max-width: 71.25em;
+    padding: 1.5rem 0;
+    max-width: 68.75rem;
     margin: 0 auto;
   }
 
