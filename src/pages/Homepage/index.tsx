@@ -4,8 +4,8 @@ import Footer from '@Components/Footer';
 import Hero from '@Components/Hero';
 import texts from '@Common/texts';
 import ImageCardContainer from '@Components/ImageCardContainer';
+import PromotionContainer from '@Components/PromotionContainer';
 import { FEATURES, STORIES } from '@/routes';
-import ImageCard from '@/components/ImageCard';
 
 const Homepage = () => (
   <>
@@ -20,20 +20,21 @@ const Homepage = () => (
       buttonText={texts.en.pages.homepage.hero_one.buttonText}
       heroTheme="dark"
       buttonLink={FEATURES}
+      displayGradient={true}
     />
-    {
-      <Hero
-        title={texts.en.pages.homepage.hero_two.title}
-        perex={texts.en.pages.homepage.hero_two.perex}
-        mobileImageUrl="/images/home/mobile/beautiful-stories.jpg"
-        tabletImageUrl="/images/home/tablet/beautiful-stories.jpg"
-        desktopImageUrl="/images/home/desktop/beautiful-stories.jpg"
-        alignText="right"
-        buttonText={texts.en.pages.homepage.hero_two.buttonText}
-        heroTheme="light"
-        buttonLink={STORIES}
-      />
-    }
+
+    <Hero
+      title={texts.en.pages.homepage.hero_two.title}
+      perex={texts.en.pages.homepage.hero_two.perex}
+      mobileImageUrl="/images/home/mobile/beautiful-stories.jpg"
+      tabletImageUrl="/images/home/tablet/beautiful-stories.jpg"
+      desktopImageUrl="/images/home/desktop/beautiful-stories.jpg"
+      alignText="right"
+      buttonText={texts.en.pages.homepage.hero_two.buttonText}
+      heroTheme="light"
+      buttonLink={STORIES}
+      displayGradient={false}
+    />
 
     <Hero
       title={texts.en.pages.homepage.hero_three.title}
@@ -43,8 +44,9 @@ const Homepage = () => (
       desktopImageUrl="/images/home/desktop/designed-for-everyone.jpg"
       alignText="left"
       buttonText={texts.en.pages.homepage.hero_three.buttonText}
-      heroTheme="dark"
+      heroTheme="light"
       buttonLink={STORIES}
+      displayGradient={false}
     />
     <ImageCardContainer
       images={[
@@ -107,6 +109,28 @@ const Homepage = () => (
             urlTablet: '/images/stories/tablet/architecturals.jpg',
             urlDesktop: '/images/stories/desktop/architecturals.jpg',
           },
+        },
+      ]}
+    />
+    <PromotionContainer
+      items={[
+        {
+          title: '100% Responsive',
+          text:
+            'No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.',
+          image: '/images/responsive.png',
+        },
+        {
+          title: 'No Photo Upload limit',
+          text:
+            'Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.',
+          image: '/images/forever.png',
+        },
+        {
+          title: 'Available to Embed',
+          text:
+            'Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ',
+          image: '/images/social.png',
         },
       ]}
     />

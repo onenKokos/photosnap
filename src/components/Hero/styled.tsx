@@ -19,6 +19,7 @@ export const StyledHero = styled.section<{
 export const ImageContainer = styled.div<{
   alignText: 'left' | 'right';
   heroTheme: 'light' | 'dark';
+  displayGradient: boolean;
 }>`
   width: 100%;
   height: 18.375rem;
@@ -37,7 +38,7 @@ export const ImageContainer = styled.div<{
 
   &::after {
     content: '';
-    display: block;
+    display: ${(props) => (props.displayGradient ? 'block' : 'none')};
     position: absolute;
     bottom: -5px;
     left: 2rem;

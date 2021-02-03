@@ -19,6 +19,7 @@ export interface HeroProps {
   buttonText: string;
   heroTheme: 'light' | 'dark';
   buttonLink: string;
+  displayGradient: boolean;
 }
 
 export interface Credentials {
@@ -38,10 +39,11 @@ const Hero = ({
   buttonText,
   heroTheme,
   buttonLink,
+  displayGradient,
 }: HeroProps) => (
   <>
     <StyledHero data-testid="hero" alignText={alignText} heroTheme={heroTheme}>
-      <ImageContainer alignText={alignText} heroTheme={heroTheme}>
+      <ImageContainer alignText={alignText} heroTheme={heroTheme} displayGradient={displayGradient}>
         <picture>
           <source srcSet={desktopImageUrl} media={`(min-width:${theme.breakpoints.large})`} />
           <source srcSet={tabletImageUrl} media={`(min-width:${theme.breakpoints.medium})`} />

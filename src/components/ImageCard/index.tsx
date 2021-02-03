@@ -5,7 +5,7 @@ import theme from '@Common/theme';
 import StylishLink from '@Components/StylishLink';
 
 export interface ImageCardProps {
-  date: string;
+  date?: string;
   title: string;
   author: string;
   link: Link;
@@ -22,7 +22,7 @@ const ImageCard = ({ date, title, author, link, image }: ImageCardProps) => (
       </picture>
     </ImageContainer>
     <ContentContainer>
-      <span>{date}</span>
+      {date && <span>{date}</span>}
       <span>{title}</span>
       <span>{`by ${author}`}</span>
       <hr />
