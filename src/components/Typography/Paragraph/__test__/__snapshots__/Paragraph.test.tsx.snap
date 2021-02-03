@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component]: Paragraph Should render correctly 1`] = `
+<div>
+  <p
+    class="sc-bdfBwQ hKiDRp"
+    data-testid="paragraph"
+  >
+    test
+  </p>
+</div>
+`;
