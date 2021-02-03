@@ -132,6 +132,8 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
       transform: translateX(0);
       padding-bottom: 0;
       letter-spacing: 2px;
+
+      font-size: 0.75rem;
     }
   }
 
