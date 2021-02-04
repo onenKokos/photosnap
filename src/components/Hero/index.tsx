@@ -16,9 +16,9 @@ export interface HeroProps {
   perex: string;
   info?: Credentials;
   alignText: 'left' | 'right';
-  buttonText: string;
+  buttonText?: string;
   heroTheme: 'light' | 'dark';
-  buttonLink: string;
+  buttonLink?: string;
   displayGradient: boolean;
   author?: string;
 }
@@ -56,12 +56,14 @@ const Hero = ({
           {caption && <span>{caption}</span>}
           <Header theme={invertTheme(heroTheme)} size="large" text={title} />
           <Paragraph theme={invertTheme(heroTheme)} text={perex} />
-          <StylishLink
-            url={buttonLink}
-            theme={invertTheme(heroTheme)}
-            text={buttonText}
-            background={false}
-          />
+          {buttonText && buttonLink && (
+            <StylishLink
+              url={buttonLink}
+              theme={invertTheme(heroTheme)}
+              text={buttonText}
+              background={false}
+            />
+          )}
         </ContentContainerInner>
       </ContentContainer>
     </StyledHero>

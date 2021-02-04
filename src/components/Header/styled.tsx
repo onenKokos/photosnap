@@ -131,6 +131,10 @@ export const LinkContainer = styled.div<{ isExpanded: boolean }>`
     transition: 0.5s ease-out;
     transition-delay: 0.3s;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     @media screen and (min-width: ${theme.breakpoints.medium}) {
       opacity: 1;
       transform: translateX(0);

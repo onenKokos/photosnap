@@ -10,7 +10,7 @@ export const StyledPromotionContainer = styled.section`
   }
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
-    padding: 6.25rem 0;
+    padding: 10rem;
   }
 `;
 
@@ -26,5 +26,6 @@ export const InnerContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
     gap: 2.5rem;
+    flex-wrap: wrap;
   }
 `;

@@ -1,6 +1,47 @@
 const texts = {
   en: {
     pages: {
+      features: {
+        hero: {
+          title: 'Create and share your photo stories.',
+          perex:
+            'Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.',
+        },
+        promo_One: {
+          title: '100% Responsive',
+          text:
+            "No matter which the device you're on, our site is fully responsive and stories look beautiful on any screen.",
+        },
+        promo_Two: {
+          title: 'No Photo Upload Limit',
+          text:
+            'Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.',
+        },
+        promo_Three: {
+          title: 'Available to Embed',
+          text:
+            'Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more.',
+        },
+        promo_Four: {
+          title: 'Custom Domain',
+          text:
+            'With Photosnap you can host your stories on you own domain. You can also remove our branding!',
+        },
+        promo_Five: {
+          title: 'Boost your Exposure',
+          text:
+            'Users that viewed your story or gallery can easily get notified of new and featured stories with our built-in mailing list.',
+        },
+        promo_Six: {
+          title: 'Drag & Drop Image',
+          text:
+            'Easily drag and drop your image and get beautiful shots everytime. No Over the top tooling to add friction to creating stories.',
+        },
+        separator: {
+          title: "We're in beta. Get your own invite today!",
+          buttonText: 'Get an invite',
+        },
+      },
       homepage: {
         hero_one: {
           title: 'Create and share your photo stories.',

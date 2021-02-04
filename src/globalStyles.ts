@@ -5,6 +5,12 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
+  #__next {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   @font-face {
     font-family: DMSans;
     src: url('public/font/DMSans-Regular.ttf') format('true-type');

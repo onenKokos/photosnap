@@ -77,6 +77,10 @@ export const ImageContainer = styled.div<{
     height: 100%;
     object-fit: cover;
     object-position: top center;
+
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      object-position: center center;
+    }
   }
 `;
 

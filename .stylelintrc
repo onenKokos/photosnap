@@ -27,5 +27,6 @@
     'selector-max-universal': 0,
     'font-weight-notation': 'numeric',
     'function-url-no-scheme-relative': true,
+    'no-descending-specificity': null
   }
 }

@@ -42,42 +42,6 @@ export const StyledCopyright = styled.span`
   }
 `;
 
-export const FooterInner = styled.div`
-  padding: 3.375rem 2rem;
-
-  @media screen and (min-width: ${theme.breakpoints.medium}) {
-    padding: 4rem 2.5rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @media screen and (min-width: ${theme.breakpoints.large}) {
-    max-width: 68.75rem;
-    margin: 0 auto;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto 2rem auto;
-    width: 10.625rem;
-
-    @media screen and (min-width: ${theme.breakpoints.medium}) {
-      margin-right: auto;
-      margin-left: 0;
-    }
-
-    @media screen and (min-width: ${theme.breakpoints.large}) {
-      margin: 0;
-      grid-area: a;
-    }
-  }
-
-  a {
-    display: block;
-    text-align: center;
-  }
-`;
-
 export const LinkContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -120,6 +84,48 @@ export const LinkContainer = styled.div`
       @media screen and (min-width: ${theme.breakpoints.large}) {
         margin-bottom: 0;
       }
+    }
+  }
+`;
+
+export const FooterInner = styled.div`
+  padding: 3.375rem 2rem;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    padding: 4rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 10.625rem;
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      margin-right: auto;
+      margin-left: 0;
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      margin: 0;
+      grid-area: a;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 `;

@@ -8,12 +8,6 @@ const Stories = () => (
   <>
     <Head>
       <title>Photosnap Stories</title>
-      <meta name="description" content="Photosnap Stories" />
-      <meta name="og:title" content="Photosnap Stories" />
-      <meta name="og:description" content="Photosnap website as part of a frontend challenge." />
-      <meta name="og:locale" content="en_US" />
-      <meta name="og:url" content="https://photosnap-nine.vercel.app/stories" />
-      <meta name="og:image" content="/images/Logo.png" />
     </Head>
     <Hero
       caption={texts.en.pages.stories.hero.caption}

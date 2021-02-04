@@ -12,7 +12,8 @@ export const StyledPromotionCard = styled.article`
   }
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
-    margin-bottom: 0;
+    width: 30%;
+    margin: 0;
   }
 
   &:last-child {
