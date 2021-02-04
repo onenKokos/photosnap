@@ -10,6 +10,7 @@
 
 # testing
 /cypress/videos
+/cypress/screenshots
 
 # production
 .next

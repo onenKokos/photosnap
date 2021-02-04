@@ -50,6 +50,12 @@ export const InnerContainer = styled.div`
     }
   }
 
+  a {
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      margin-right: 0;
+    }
+  }
+
   &::before {
     content: '';
     display: block;
