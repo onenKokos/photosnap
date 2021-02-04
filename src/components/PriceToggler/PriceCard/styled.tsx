@@ -11,6 +11,17 @@ export const StyledPriceCard = styled.div<{ theme: 'light' | 'dark' }>`
   align-items: center;
   position: relative;
 
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: grid;
+    grid-template-areas: 'a b' 'c d' 'e e';
+  }
+
+  button {
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      grid-area: e;
+    }
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -35,6 +46,10 @@ export const Title = styled.h3<{ theme: 'light' | 'dark' }>`
   line-height: 1.5625rem;
   margin-bottom: 0.625rem;
   font-weight: 600;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    grid-area: a;
+  }
 `;
 
 export const Description = styled.p`
@@ -44,6 +59,12 @@ export const Description = styled.p`
   margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.0625rem;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    grid-area: c;
+    width: 60%;
+    text-align: left;
+  }
 `;
 
 export const Price = styled.span<{ theme: 'dark' | 'light' }>`
@@ -53,10 +74,20 @@ export const Price = styled.span<{ theme: 'dark' | 'light' }>`
     props.theme === 'light' ? `${theme.colors.primaryDark}` : `${theme.colors.primaryLight}`};
   display: block;
   letter-spacing: 0.125rem;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    grid-area: b;
+  }
 `;
+
 export const Per = styled.span`
   font-size: 1rem;
   line-height: 1.0625rem;
   color: ${theme.colors.muted};
   margin-bottom: 2rem;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    grid-area: d;
+    text-align: right;
+  }
 `;
