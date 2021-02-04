@@ -17,6 +17,11 @@ export const SocialContainer = styled.div`
     margin-bottom: 0;
   }
 
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    grid-area: c;
+    align-items: flex-end;
+  }
+
   svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -41,7 +46,7 @@ export const FooterInner = styled.div`
   padding: 3.375rem 2rem;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
-    padding: 4rem 2.5rem;
+    padding: 4rem 0;
     display: flex;
     justify-content: space-between;
   }
@@ -59,6 +64,11 @@ export const FooterInner = styled.div`
     @media screen and (min-width: ${theme.breakpoints.medium}) {
       margin-right: auto;
       margin-left: 0;
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      margin: 0;
+      grid-area: a;
     }
   }
 
@@ -80,6 +90,12 @@ export const LinkContainer = styled.div`
     gap: 1.5rem;
   }
 
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    flex-direction: column;
+    grid-area: b;
+    margin-bottom: 0;
+  }
+
   a {
     text-decoration: none;
     text-transform: uppercase;
@@ -90,11 +106,19 @@ export const LinkContainer = styled.div`
     line-height: 1rem;
     letter-spacing: 2px;
 
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      margin-bottom: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
 
       @media screen and (min-width: ${theme.breakpoints.medium}) {
         margin-bottom: 1.5rem;
+      }
+
+      @media screen and (min-width: ${theme.breakpoints.large}) {
+        margin-bottom: 0;
       }
     }
   }
@@ -109,6 +133,17 @@ export const FooterColumn = styled.div`
     width: 50%;
   }
 
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    width: 33.3333%;
+  }
+
+  &:first-child {
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      display: grid;
+      grid-template-areas: 'a b' 'c b';
+    }
+  }
+
   &:last-child {
     a {
       margin: 0 auto;
@@ -116,6 +151,11 @@ export const FooterColumn = styled.div`
         margin-left: auto;
         margin-right: 0;
       }
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      width: auto;
+      flex: 1;
     }
   }
 `;
