@@ -16,7 +16,12 @@ const Header = () => {
     <StyledHeader data-testid="header">
       <Overlay isActive={isExpanded} />
       <HeaderInner>
-        <Logo />
+        <Link href="/">
+          <a>
+            <Logo />
+          </a>
+        </Link>
+
         <Hamburger isExpanded={isExpanded} onClick={handleClick}>
           <div />
           <div />

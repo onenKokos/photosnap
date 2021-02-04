@@ -10,12 +10,34 @@ const Homepage = () => (
   <>
     <Head>
       <title>Photosnap</title>
-      <meta name="description" content="Photosnap Homepage" />
-      <meta name="og:title" content="Photosnap Homepage" />
-      <meta name="og:description" content="Photosnap website as part of a frontend challenge." />
-      <meta name="og:locale" content="en_US" />
-      <meta name="og:url" content="https://photosnap-nine.vercel.app/" />
-      <meta name="og:image" content="/images/Logo.png" />
+      <meta name="description" content="Photosnap website as part of a frontend challenge." />
+
+      {/* Facebook Meta Tags */}
+      <meta property="og:url" content="https://photosnap-nine.vercel.app/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Photosnap Homepage" />
+      <meta
+        property="og:description"
+        content="Photosnap website as part of a frontend challenge."
+      />
+      <meta
+        property="og:image"
+        content="https://photosnap-nine.vercel.app/images/stories/desktop/moon-of-appalacia.jpg"
+      />
+
+      {/* Twitter Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="photosnap-nine.vercel.app" />
+      <meta property="twitter:url" content="https://photosnap-nine.vercel.app/" />
+      <meta name="twitter:title" content="Photosnap Homepage" />
+      <meta
+        name="twitter:description"
+        content="Photosnap website as part of a frontend challenge."
+      />
+      <meta
+        name="twitter:image"
+        content="https://photosnap-nine.vercel.app/images/stories/desktop/moon-of-appalacia.jpg"
+      />
     </Head>
     <Hero
       title={texts.en.pages.homepage.hero_one.title}
