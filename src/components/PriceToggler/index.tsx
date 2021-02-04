@@ -16,23 +16,23 @@ interface PriceTogglerProps {
 }
 
 const PriceToggler = ({ options, option_One, option_Two }: PriceTogglerProps) => {
-  const [option, setOption] = useState<'monthly' | 'yearly'>('monthly');
+  const [active, setActive] = useState<'monthly' | 'yearly'>('monthly');
 
   const toggleOption = () => {
-    option === 'monthly' ? setOption('yearly') : setOption('monthly');
+    active === 'monthly' ? setActive('yearly') : setActive('monthly');
   };
 
   return (
     <StyledPriceToggler>
       <InnerContainer>
         <SwitchContainer>
-          <Description isActive={option === option_One}>{option_One}</Description>
-          <Toggler activePlan={option} onClick={toggleOption} />
-          <Description isActive={option === option_Two}>{option_Two}</Description>
+          <Description isActive={active === option_One}>{option_One}</Description>
+          <Toggler activePlan={active} onClick={toggleOption} />
+          <Description isActive={active === option_Two}>{option_Two}</Description>
         </SwitchContainer>
         <CardContainer>
           {options.map((option: PriceCardProps) => (
-            <PriceCard {...option} key={`k__${option.title}`} />
+            <PriceCard {...option} activePlan={active} key={`k__${option.title}`} />
           ))}
         </CardContainer>
       </InnerContainer>

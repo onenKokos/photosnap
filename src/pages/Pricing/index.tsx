@@ -36,20 +36,20 @@ const Pricing = () => (
         {
           buttonText: texts.en.pages.pricing.priceToggler.buttonText,
           buttonUrl: '/',
-          description: texts.en.pages.pricing.priceCard_One.description,
-          monthlyPrice: texts.en.pages.pricing.priceCard_One.pricePerMonth,
-          yearlyPrice: texts.en.pages.pricing.priceCard_One.pricePerYear,
+          description: texts.en.pages.pricing.priceCard_Two.description,
+          monthlyPrice: texts.en.pages.pricing.priceCard_Two.pricePerMonth,
+          yearlyPrice: texts.en.pages.pricing.priceCard_Two.pricePerYear,
           theme: 'dark',
-          title: texts.en.pages.pricing.priceCard_One.name,
+          title: texts.en.pages.pricing.priceCard_Two.name,
         },
         {
           buttonText: texts.en.pages.pricing.priceToggler.buttonText,
           buttonUrl: '/',
-          description: texts.en.pages.pricing.priceCard_One.description,
-          monthlyPrice: texts.en.pages.pricing.priceCard_One.pricePerMonth,
-          yearlyPrice: texts.en.pages.pricing.priceCard_One.pricePerYear,
+          description: texts.en.pages.pricing.priceCard_Three.description,
+          monthlyPrice: texts.en.pages.pricing.priceCard_Three.pricePerMonth,
+          yearlyPrice: texts.en.pages.pricing.priceCard_Three.pricePerYear,
           theme: 'light',
-          title: texts.en.pages.pricing.priceCard_One.name,
+          title: texts.en.pages.pricing.priceCard_Three.name,
         },
       ]}
     />

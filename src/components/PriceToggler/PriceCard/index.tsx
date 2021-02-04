@@ -26,7 +26,6 @@ const PriceCard = ({
   activePlan,
 }: PriceCardProps) => {
   const router = useRouter();
-
   const handleClick = () => {
     router.push(`${buttonUrl}`);
   };

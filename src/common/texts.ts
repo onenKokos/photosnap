@@ -25,6 +25,24 @@ const texts = {
           perYear: 'per year',
           name: 'Basic',
         },
+        priceCard_Two: {
+          description:
+            'More advanced features available. Recommended for photography veterans and professionals.',
+          pricePerMonth: '39.00',
+          pricePerYear: '390.00',
+          perMonth: 'per month',
+          perYear: 'per year',
+          name: 'Pro',
+        },
+        priceCard_Three: {
+          description:
+            'Additional features available such as more detailed metrics. Recommended for business owners.',
+          pricePerMonth: '99.00',
+          pricePerYear: '990.00',
+          perMonth: 'per month',
+          perYear: 'per year',
+          name: 'Business',
+        },
       },
       features: {
         hero: {
