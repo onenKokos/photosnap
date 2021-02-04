@@ -1,10 +1,20 @@
 import React from 'react';
+import Head from 'next/head';
 import ImageCardContainer from '@Components/ImageCardContainer';
 import Hero from '@Components/Hero';
 import texts from '@Common/texts';
 
 const Stories = () => (
   <>
+    <Head>
+      <title>Photosnap Stories</title>
+      <meta name="description" content="Photosnap Stories" />
+      <meta name="og:title" content="Photosnap Stories" />
+      <meta name="og:description" content="Photosnap website as part of a frontend challenge." />
+      <meta name="og:locale" content="en_US" />
+      <meta name="og:url" content="https://photosnap-nine.vercel.app/stories" />
+      <meta name="og:image" content="/images/Logo.png" />
+    </Head>
     <Hero
       caption={texts.en.pages.stories.hero.caption}
       title={texts.en.pages.stories.hero.title}

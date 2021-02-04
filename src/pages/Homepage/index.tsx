@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Hero from '@Components/Hero';
 import texts from '@Common/texts';
 import ImageCardContainer from '@Components/ImageCardContainer';
@@ -7,6 +8,15 @@ import { FEATURES, STORIES } from '@/routes';
 
 const Homepage = () => (
   <>
+    <Head>
+      <title>Photosnap</title>
+      <meta name="description" content="Photosnap Homepage" />
+      <meta name="og:title" content="Photosnap Homepage" />
+      <meta name="og:description" content="Photosnap website as part of a frontend challenge." />
+      <meta name="og:locale" content="en_US" />
+      <meta name="og:url" content="https://photosnap-nine.vercel.app/" />
+      <meta name="og:image" content="/images/Logo.png" />
+    </Head>
     <Hero
       title={texts.en.pages.homepage.hero_one.title}
       perex={texts.en.pages.homepage.hero_one.perex}
