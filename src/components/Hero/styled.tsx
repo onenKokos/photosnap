@@ -102,6 +102,10 @@ export const ContentContainer = styled.div`
 `;
 
 export const ContentContainerInner = styled.div`
+  p {
+    opacity: 0.6;
+  }
+
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     p {
       margin-bottom: 3rem;

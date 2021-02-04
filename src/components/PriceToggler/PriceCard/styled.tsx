@@ -14,6 +14,7 @@ export const StyledPriceCard = styled.div<{ theme: 'light' | 'dark' }>`
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     display: grid;
     grid-template-areas: 'a b' 'c d' 'e e';
+    grid-template-columns: 1fr 1fr;
   }
 
   button {
@@ -62,7 +63,6 @@ export const Description = styled.p`
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     grid-area: c;
-    width: 60%;
     text-align: left;
   }
 `;
@@ -77,6 +77,7 @@ export const Price = styled.span<{ theme: 'dark' | 'light' }>`
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     grid-area: b;
+    text-align: right;
   }
 `;
 
