@@ -46,7 +46,7 @@ export const FooterInner = styled.div`
   padding: 3.375rem 2rem;
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
-    padding: 4rem 0;
+    padding: 4rem 2.5rem;
     display: flex;
     justify-content: space-between;
   }

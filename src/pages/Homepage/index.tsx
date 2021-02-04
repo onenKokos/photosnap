@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '@Components/Header';
-import Footer from '@Components/Footer';
 import Hero from '@Components/Hero';
 import texts from '@Common/texts';
 import ImageCardContainer from '@Components/ImageCardContainer';
@@ -9,7 +7,6 @@ import { FEATURES, STORIES } from '@/routes';
 
 const Homepage = () => (
   <>
-    <Header />
     <Hero
       title={texts.en.pages.homepage.hero_one.title}
       perex={texts.en.pages.homepage.hero_one.perex}
@@ -134,7 +131,6 @@ const Homepage = () => (
         },
       ]}
     />
-    <Footer />
   </>
 );
 

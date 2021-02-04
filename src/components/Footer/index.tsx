@@ -21,7 +21,7 @@ const Footer = () => (
   <StyledFooter>
     <FooterInner>
       <FooterColumn>
-        <img src="/images/Logo.png" alt="Logo" />
+        <img src="/images/Logo-white.png" alt="Logo" />
         <SocialContainer>
           <Facebook />
           <Instagram />

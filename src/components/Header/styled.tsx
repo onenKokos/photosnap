@@ -32,6 +32,10 @@ export const HeaderInner = styled.div`
     grid-column-start: 1;
     grid-column-end: 2;
     height: 100%;
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      position: relative;
+    }
   }
 `;
 

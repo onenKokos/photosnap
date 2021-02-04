@@ -14,6 +14,14 @@ export const StyledButton = styled.button<{ theme?: 'light' | 'dark' }>`
   border: none;
   font-weight: 600;
   font-size: 0.75rem;
+  cursor: pointer;
+  transition: ${theme.transition.basic};
+
+  &:hover {
+    background-color: ${theme.colors.buttonHover};
+    transition: ${theme.transition.basic};
+    color: ${theme.colors.primaryDark};
+  }
 
   background-color: ${(props) =>
     props.theme && props.theme === 'light'

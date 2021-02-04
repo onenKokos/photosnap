@@ -3,7 +3,7 @@
 exports[`[Component]: Button Should render correctly 1`] = `
 <div>
   <button
-    class="sc-bdfBwQ fJnyiO"
+    class="sc-bdfBwQ jIiGPx"
     data-testid="button"
   >
     test

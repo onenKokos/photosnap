@@ -4,6 +4,8 @@ import Head from 'next/head';
 import GlobalStyles from '../src/globalStyles';
 import AppContext from '@Store/index';
 import ErrorBoundary from '@Components/ErrorBoundary';
+import Header from '@Components/Header';
+import Footer from '@Components/Footer';
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
@@ -15,7 +17,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
       </Head>
       <GlobalStyles />
       <ErrorBoundary>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </ErrorBoundary>
     </AppContext>
   );
