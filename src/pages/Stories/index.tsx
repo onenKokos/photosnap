@@ -7,7 +7,7 @@ import texts from '@Common/texts';
 const Stories = () => (
   <>
     <Head>
-      <title>Photosnap Stories</title>
+      <title>Photosnap - Stories</title>
     </Head>
     <Hero
       caption={texts.en.pages.stories.hero.caption}

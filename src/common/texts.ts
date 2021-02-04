@@ -1,6 +1,31 @@
 const texts = {
   en: {
     pages: {
+      pricing: {
+        hero: {
+          title: 'Pricing',
+          perex:
+            "Create your own stories, Photosnap is a platform for photographers and visual storytellers. It's the simple way to create and share your photos.",
+        },
+        separator: {
+          title: "We're in beta. Get your own invite today!",
+          buttonText: 'Get an invite',
+        },
+        priceToggler: {
+          option_One: 'monthly',
+          option_Two: 'yearly',
+          buttonText: 'Pick plan',
+        },
+        priceCard_One: {
+          description:
+            'Includes basic usage of our platform. Recommended for new and aspiring photographers.',
+          pricePerMonth: '19.00',
+          pricePerYear: '190.00',
+          perMonth: 'per month',
+          perYear: 'per year',
+          name: 'Basic',
+        },
+      },
       features: {
         hero: {
           title: 'Create and share your photo stories.',

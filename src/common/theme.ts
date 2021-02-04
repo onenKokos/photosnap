@@ -4,6 +4,7 @@ const theme = {
     large: '90em',
   },
   colors: {
+    cardGray: '	hsl(0, 0%, 96%)',
     primaryDark: 'hsl(0,0%,0%)',
     primaryLight: 'hsl(255,255%,255%)',
     secondaryLight: 'hsl(233,233%,233%)',
