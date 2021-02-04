@@ -61,7 +61,7 @@ const Homepage = () => (
           image: {
             alt: 'Image card',
             urlMobile: '/images/stories/mobile/mountains.jpg',
-            urlTablet: '/images/stories/tablet/mountains.jpg',
+            urlTablet: '/images/stories/mobile/mountains.jpg',
             urlDesktop: '/images/stories/desktop/mountains.jpg',
           },
         },
@@ -76,7 +76,7 @@ const Homepage = () => (
           image: {
             alt: 'Image card',
             urlMobile: '/images/stories/mobile/cityscapes.jpg',
-            urlTablet: '/images/stories/tablet/cityscapes.jpg',
+            urlTablet: '/images/stories/mobile/cityscapes.jpg',
             urlDesktop: '/images/stories/desktop/cityscapes.jpg',
           },
         },
@@ -91,7 +91,7 @@ const Homepage = () => (
           image: {
             alt: 'Image card',
             urlMobile: '/images/stories/mobile/18-days-voyage.jpg',
-            urlTablet: '/images/stories/tablet/18-days-voyage.jpg',
+            urlTablet: '/images/stories/mobile/18-days-voyage.jpg',
             urlDesktop: '/images/stories/desktop/18-days-voyage.jpg',
           },
         },
@@ -106,7 +106,7 @@ const Homepage = () => (
           image: {
             alt: 'Image card',
             urlMobile: '/images/stories/mobile/architecturals.jpg',
-            urlTablet: '/images/stories/tablet/architecturals.jpg',
+            urlTablet: '/images/stories/mobile/architecturals.jpg',
             urlDesktop: '/images/stories/desktop/architecturals.jpg',
           },
         },

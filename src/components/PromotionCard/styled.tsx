@@ -5,6 +5,16 @@ export const StyledPromotionCard = styled.article`
   width: 100%;
   margin-bottom: 3.5rem;
 
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    max-width: 28.625rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    margin-bottom: 0;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
