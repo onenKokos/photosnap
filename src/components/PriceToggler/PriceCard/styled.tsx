@@ -13,8 +13,14 @@ export const StyledPriceCard = styled.div<{ theme: 'light' | 'dark' }>`
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     display: grid;
-    grid-template-areas: 'a b' 'c d' 'e e';
+    grid-template-areas: 'a b' 'c d' 'e .';
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: flex;
+    align-items: center;
+    height: ${(props) => (props.theme === 'dark' ? '29.375rem' : 'auto')};
   }
 
   button {
@@ -65,11 +71,16 @@ export const Description = styled.p`
     grid-area: c;
     text-align: left;
   }
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    text-align: center;
+  }
 `;
 
 export const Price = styled.span<{ theme: 'dark' | 'light' }>`
   font-size: 2.5rem;
   line-height: 3rem;
+  font-weight: 600;
   color: ${(props) =>
     props.theme === 'light' ? `${theme.colors.primaryDark}` : `${theme.colors.primaryLight}`};
   display: block;

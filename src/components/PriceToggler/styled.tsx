@@ -3,9 +3,19 @@ import theme from '@Common/theme';
 
 export const StyledPriceToggler = styled.section`
   padding: 4rem 2rem;
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
-export const InnerContainer = styled.div``;
+export const InnerContainer = styled.div`
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    max-width: 68.75rem;
+    margin: auto;
+  }
+`;
 
 export const Description = styled.span<{ isActive: boolean }>`
   font-size: 1.125rem;
@@ -59,5 +69,6 @@ export const CardContainer = styled.div`
 
   @media screen and (min-width: ${theme.breakpoints.large}) {
     flex-direction: row;
+    align-items: baseline;
   }
 `;
