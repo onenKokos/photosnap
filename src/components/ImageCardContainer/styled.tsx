@@ -5,6 +5,7 @@ export const StyledImageCardContainer = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  background-color: ${theme.colors.primaryDark};
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     grid-template-columns: 1fr 1fr;

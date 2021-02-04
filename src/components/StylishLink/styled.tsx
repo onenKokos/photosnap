@@ -11,6 +11,7 @@ export const StyledLink = styled.a<{ theme: 'light' | 'dark'; background: boolea
     props.theme === 'light' ? `${theme.colors.primaryLight}` : `${theme.colors.primaryDark}`};
   display: flex;
   margin-right: auto;
+  cursor: pointer;
 
   svg {
     margin-left: 0.75rem;

@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import theme from '@Common/theme';
 
-export const StyledImageCard = styled.article`
+export const ImageCardWrapper = styled.article`
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    height: 0;
+    overflow: hidden;
+    padding-top: 140%;
+    position: relative;
+  }
+`;
+
+export const StyledImageCard = styled.div`
   height: 23.4375rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -43,6 +52,14 @@ export const StyledImageCard = styled.article`
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     height: 31.25rem;
+  }
+
+  @media screen and (min-width: ${theme.breakpoints.large}) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
   }
 `;
 

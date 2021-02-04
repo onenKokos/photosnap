@@ -20,6 +20,7 @@ export interface HeroProps {
   heroTheme: 'light' | 'dark';
   buttonLink: string;
   displayGradient: boolean;
+  author?: string;
 }
 
 export interface Credentials {
@@ -34,7 +35,7 @@ const Hero = ({
   caption,
   title,
   perex,
-  info,
+  author,
   alignText,
   buttonText,
   heroTheme,
