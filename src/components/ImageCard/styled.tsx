@@ -3,11 +3,60 @@ import theme from '@Common/theme';
 
 export const StyledImageCard = styled.article`
   height: 23.4375rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
   position: relative;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -0.625rem;
+    height: 0.625rem;
+    left: 0;
+    right: 0;
+    width: 0;
+    transition: 0.3s ease-in-out;
+    background-image: linear-gradient(
+      to right,
+      ${theme.colors.accents.primary},
+      ${theme.colors.accents.secondary},
+      ${theme.colors.accents.tertiary}
+    );
+  }
+
+  &:hover {
+    transform: translateY(-0.625rem);
+    transition: 0.3s ease-in-out;
+
+    div:first-child {
+      opacity: 0.3;
+      transition: 0.3s ease-in-out;
+    }
+
+    &::after {
+      width: 100%;
+      transition: 0.3s ease-in-out;
+    }
+  }
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     height: 31.25rem;
   }
+`;
+
+export const CardShadow = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-color: ${theme.colors.primaryDark};
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 `;
 
 export const ImageContainer = styled.div`
@@ -24,6 +73,7 @@ export const ImageContainer = styled.div`
 export const ContentContainer = styled.div`
   padding: 2.5rem;
   position: absolute;
+  z-index: 3;
   bottom: 0;
   width: 100%;
   background-image: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.001), hsla(0, 0%, 0%, 0.8));

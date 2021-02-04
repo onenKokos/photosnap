@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Link } from '@Common/interfaces';
-import { StyledImageCard, ImageContainer, ContentContainer } from './styled';
+import { StyledImageCard, ImageContainer, ContentContainer, CardShadow } from './styled';
 import theme from '@Common/theme';
 import StylishLink from '@Components/StylishLink';
 
@@ -14,6 +14,7 @@ export interface ImageCardProps {
 
 const ImageCard = ({ date, title, author, link, image }: ImageCardProps) => (
   <StyledImageCard>
+    <CardShadow />
     <ImageContainer>
       <picture>
         <source srcSet={image.urlDesktop} media={`(min-width:${theme.breakpoints.large})`} />
