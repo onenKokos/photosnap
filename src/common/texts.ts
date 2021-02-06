@@ -8,7 +8,7 @@ const texts = {
             "Create your own stories, Photosnap is a platform for photographers and visual storytellers. It's the simple way to create and share your photos.",
         },
         separator: {
-          title: "We're in beta. Get your own invite today!",
+          title: "We're in beta. Get your invite today!",
           buttonText: 'Get an invite',
         },
         priceToggler: {
@@ -42,6 +42,44 @@ const texts = {
           perMonth: 'per month',
           perYear: 'per year',
           name: 'Business',
+        },
+        table: {
+          title: 'Compare',
+          headerItems: ['The features', 'Basic', 'Pro', 'Business'],
+          content: [
+            {
+              title: 'Unlimited story posting',
+              options: [true, true, true],
+            },
+            {
+              title: 'Unlimited photo upload',
+              options: [true, true, true],
+            },
+            {
+              title: 'Embedding custom content',
+              options: [false, true, true],
+            },
+            {
+              title: 'Customize metadata',
+              options: [false, true, true],
+            },
+            {
+              title: 'Advanced metrics',
+              options: [false, false, true],
+            },
+            {
+              title: 'Photo downloads',
+              options: [false, false, true],
+            },
+            {
+              title: 'Search engine indexing',
+              options: [false, false, true],
+            },
+            {
+              title: 'Custom analytics',
+              options: [false, false, true],
+            },
+          ],
         },
       },
       features: {
@@ -81,7 +119,7 @@ const texts = {
             'Easily drag and drop your image and get beautiful shots everytime. No Over the top tooling to add friction to creating stories.',
         },
         separator: {
-          title: "We're in beta. Get your own invite today!",
+          title: "We're in beta. Get your invite today!",
           buttonText: 'Get an invite',
         },
       },

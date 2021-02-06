@@ -104,6 +104,7 @@ export const ContentContainer = styled.div`
 export const ContentContainerInner = styled.div`
   p {
     opacity: 0.6;
+    color: ${theme.colors.primaryLight};
   }
 
   @media screen and (min-width: ${theme.breakpoints.medium}) {

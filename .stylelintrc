@@ -16,7 +16,7 @@
     'property-no-vendor-prefix': true,
     'selector-no-vendor-prefix': true,
     'value-no-vendor-prefix': true,
-    'max-nesting-depth': 3,
+    'max-nesting-depth': 6,
     'selector-max-compound-selectors': 4,
     'selector-max-specificity': '0,4,1',
     'color-named': 'never',

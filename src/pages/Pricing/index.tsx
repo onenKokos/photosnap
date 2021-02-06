@@ -4,6 +4,7 @@ import texts from '@Common/texts';
 import Hero from '@Components/Hero';
 import Separator from '@Components/ImageSeparator';
 import PriceToggler from '@Components/PriceToggler';
+import Table from '@Components/TableComponent';
 
 const Pricing = () => (
   <>
@@ -50,6 +51,44 @@ const Pricing = () => (
           yearlyPrice: texts.en.pages.pricing.priceCard_Three.pricePerYear,
           theme: 'light',
           title: texts.en.pages.pricing.priceCard_Three.name,
+        },
+      ]}
+    />
+    <Table
+      title={texts.en.pages.pricing.table.title}
+      headerItems={texts.en.pages.pricing.table.headerItems as [string, string, string, string]}
+      rowItems={[
+        {
+          title: texts.en.pages.pricing.table.content[0].title,
+          options: texts.en.pages.pricing.table.content[0].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[1].title,
+          options: texts.en.pages.pricing.table.content[1].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[2].title,
+          options: texts.en.pages.pricing.table.content[2].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[3].title,
+          options: texts.en.pages.pricing.table.content[3].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[4].title,
+          options: texts.en.pages.pricing.table.content[4].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[5].title,
+          options: texts.en.pages.pricing.table.content[5].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[6].title,
+          options: texts.en.pages.pricing.table.content[6].options as [boolean, boolean, boolean],
+        },
+        {
+          title: texts.en.pages.pricing.table.content[7].title,
+          options: texts.en.pages.pricing.table.content[7].options as [boolean, boolean, boolean],
         },
       ]}
     />
