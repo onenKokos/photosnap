@@ -58,16 +58,32 @@ export const StyledTable = styled.table`
       justify-content: space-between;
       padding-top: 4.5rem;
 
+      @media screen and (min-width: ${theme.breakpoints.medium}) {
+        display: grid;
+        grid-template-columns: 50% 1fr 1fr 1fr;
+        padding-top: 1.5rem;
+      }
+
       td:first-child {
         position: absolute;
         top: 1.2rem;
         left: 0;
         width: 100%;
+
+        @media screen and (min-width: ${theme.breakpoints.medium}) {
+          position: static;
+          width: auto;
+        }
       }
 
       td:not(:first-child) {
         position: relative;
         width: 33%;
+
+        @media screen and (min-width: ${theme.breakpoints.medium}) {
+          width: 100%;
+          text-align: center;
+        }
 
         &::before {
           content: attr(data-label);
@@ -98,9 +114,11 @@ export const StyledTable = styled.table`
     &:first-child {
       width: 100%;
       text-align: left;
+      padding-bottom: 1.5rem;
 
       @media screen and (min-width: ${theme.breakpoints.medium}) {
         width: auto;
+        padding-bottom: 0;
       }
     }
 
